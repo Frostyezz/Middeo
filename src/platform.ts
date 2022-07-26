@@ -1,6 +1,6 @@
 import web3 from "./web3";
 
-const address = "0xb5B8498A04fa4d64147694097054D5812C453b82";
+const address = "0xa293f09Ee172886c3A37A5093E8E85561Fc89505";
 
 const abi = [
   {
@@ -17,6 +17,21 @@ const abi = [
   },
   {
     constant: true,
+    inputs: [],
+    name: "retrieveUserPosts",
+    outputs: [
+      {
+        components: [{ name: "id", type: "string" }],
+        name: "",
+        type: "tuple[]",
+      },
+    ],
+    payable: false,
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    constant: true,
     inputs: [{ name: "id", type: "string" }],
     name: "retrievePost",
     outputs: [
@@ -25,6 +40,8 @@ const abi = [
           { name: "title", type: "string" },
           { name: "description", type: "string" },
           { name: "author", type: "address" },
+          { name: "tags", type: "uint256[]" },
+          { name: "posted", type: "uint256" },
           { name: "reward", type: "uint256" },
           {
             components: [
@@ -68,6 +85,21 @@ const abi = [
     outputs: [],
     payable: true,
     stateMutability: "payable",
+    type: "function",
+  },
+  {
+    constant: true,
+    inputs: [],
+    name: "retrieveUserCandidatures",
+    outputs: [
+      {
+        components: [{ name: "id", type: "string" }],
+        name: "",
+        type: "tuple[]",
+      },
+    ],
+    payable: false,
+    stateMutability: "view",
     type: "function",
   },
   {
