@@ -1,10 +1,15 @@
-import web3 from "./web3";
-import logo from "./logo.svg";
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home/Home";
 
 function App() {
-  console.log(web3.version);
-  return <div className="App"></div>;
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
