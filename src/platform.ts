@@ -1,6 +1,6 @@
 import web3 from "./web3";
 
-const address = "0xa293f09Ee172886c3A37A5093E8E85561Fc89505";
+const address = "0x19B9b4Cac52aa4E3cF173381FC3C1025D9276314";
 
 const abi = [
   {
@@ -72,6 +72,21 @@ const abi = [
     outputs: [],
     payable: false,
     stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    constant: true,
+    inputs: [],
+    name: "retrievePostIds",
+    outputs: [
+      {
+        components: [{ name: "id", type: "string" }],
+        name: "",
+        type: "tuple[]",
+      },
+    ],
+    payable: false,
+    stateMutability: "view",
     type: "function",
   },
   {
