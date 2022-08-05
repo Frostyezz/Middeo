@@ -1,0 +1,21 @@
+$white: #f8f7ff;
+$blue: #9381ff;
+$orange: #dd6b20;
+
+@mixin cover() {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin flex_center() {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
