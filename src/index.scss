@@ -24,10 +24,26 @@ code {
   flex-direction: row;
 }
 
+.col {
+  flex-direction: column;
+}
+
 .items-center {
   align-items: center;
 }
 
 .pointer {
   cursor: pointer;
+}
+
+.center-y {
+  margin: auto 0;
+}
+
+.center-x {
+  margin: 0 auto;
+}
+
+.center {
+  margin: auto;
 }
